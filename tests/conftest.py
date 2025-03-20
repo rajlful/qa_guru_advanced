@@ -8,9 +8,11 @@ import pytest
 def envs():
     dotenv.load_dotenv()
 
+
 @pytest.fixture(scope='session')
 def app_url() -> str:
-    return os.getenv("APP_URL")
+    return f'{os.getenv("APP_URL")}/{{os.getenv("APP_PORT")}}'
+
 
 @pytest.fixture(scope='session')
 def users_endpoint() -> str:
