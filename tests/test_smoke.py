@@ -1,8 +1,6 @@
+import requests
 
 from http import HTTPStatus
-from random import randint
-
-import requests
 
 
 def test_app_run(app_url):

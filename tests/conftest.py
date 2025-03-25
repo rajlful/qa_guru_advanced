@@ -11,7 +11,7 @@ def envs():
 
 @pytest.fixture(scope='session')
 def app_url() -> str:
-    return f'{os.getenv("APP_URL")}/{{os.getenv("APP_PORT")}}'
+    return f'{os.getenv("APP_URL")}'
 
 
 @pytest.fixture(scope='session')
