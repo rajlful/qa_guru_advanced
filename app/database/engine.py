@@ -7,7 +7,7 @@ from sqlmodel import create_engine, SQLModel, text
 dotenv.load_dotenv()
 
 engine = create_engine(
-    os.getenv('DATABASE_ENGINE'),
+    os.getenv('DATABASE_ENGINE', default='postgresql://postgres:Admin12345!@db:5432/postgres'),
     pool_size=10
 )
 
