@@ -17,6 +17,7 @@ jobs:
       - run: pytest tests
         env:
           APP_URL: http://127.0.0.1:8888
+          DATABASE_ENGINE: postgresql://postgres:Admin12345!@db:5432/postgres
 
 
       - run: docker compose logs app
